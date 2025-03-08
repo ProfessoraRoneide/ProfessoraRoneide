@@ -78,7 +78,95 @@
                     <select id="p6" name="pergunta6">
                         <input type="file" id="p6" name="pergunta6">
                     </select>
-                </form>
+                     <!--Pergunta 7: menu suspenso-->
+ <h2>Pergunta 7: Selecione o atributo do input que define seu tipo:</h2>
+ <form>
+     <select id="p7" name="pergunta7">
+         <option value="Id">Id</option>
+         <option value="Type">Type</option>    
+     </select>
+     <!--Pergunta 8:imagem-->
+     <h2>Pergunta 8: Qual linguagem de programação é representada pelo logotipo abaixo? </h2>
+     <figure>
+         <img src="java.png" alt="Logotipo de uma liguagem de programação"><br>
+         <figcaption>Logotipo de uma linguagem de programação</figcaption>
+     </figure>
+     <input type="text" id="p8" name="pergunta8"placeholder="Digite sua resposta...">
+     <form>    
+     </form>
+     <!--Pergunta 9: tabela de pontuação-->
+     
+     <h2>Pergunta 9: Tabela de pontuação</h2>
+     <table border="1"> 
+         <thead>
+             <tr>
+                 <th> Pontuação </th>
+                 <th> Resultado </th>
+             </tr>
+            
+         </thead>
+         <tbody>
+         <tr>
+             <td>0-2</td>
+             <td>Não dessista!</td>
+         </tr>
+         <tr>
+             <td>3-4</td>
+             <td>Você precisa melhorar!</td>
+         </tr>
+         <tr>
+             <td>5-7</td>
+             <td>Seu conhecimento está satisfatório!</td>
+         </tr>
+         <tr>
+             <td> 8 </td>
+             <td>Impressionante! Você é um programador ninja!</td>
+         </tr>
+         </tbody>
+         <tfoot>
+             <tr>
+                 <td colspan="2">Obrigado por participar do quiz!</td>
+             </tr>
+         </tfoot>
+     </table>
+ </form>
+ <!--Listas de respostas-->
+ <section>
+     <h2>Respostas</h2>
+     <details>
+         <summary>Clique aqui para ver as respostas do quiz</summary>
+     <ol>
+         <li> HTML</li>
+         <li> domínio</li>
+         <li> Resposta pessoal</li>
+         <li> Resposta pessoal</li>
+         <li> Javascript</li>
+         <li> Extenção .html</li>
+         <li> Type</li>
+         <li> Java</li>
+     </ol>
+     </details>
+ </section>
+ <!--formulário  -->
+ <section>
+     <h2>Nos dê um feedback</h2>
+     <form>
+         <fieldset>
+             <legend>Informação de contato</legend>
+         <label for="name">Nome:</label><br>
+         <input type="text" id="nome" name="nome"placeholder="Digite seu nome..."><br>
+         <input type="email" id="email" name="email"placeholder="Digite seu email..."><br>
+         <label for="Comentários">Comentários</label><br>
+         <textarea id="Comentários " 
+         name="Comentários" rows="4" cols="50" placeholder="Digite seu comentário aqui..."></textarea>
+     </fieldset>
+     </form>
+ </section>
+    </form>
     </main>
+           <footer>
+       <p>&copy;Quiz de programação. Todos os direitos reservados</p> 
+       <p>Para conhecer outros Quizzzes <a href="https://pt.quizur.com/tag/1jS-quizz/trivia" target="_blank">clique aqui </a></p>
+   </footer>        
 </body>
 </html>
