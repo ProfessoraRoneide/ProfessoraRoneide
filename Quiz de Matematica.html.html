@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Matemática</title>
+    <style>
+        h1 { text-align: center;
+            color: #eb2828; 
+            font-size: 2em;
+         }
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; }
+        .question { margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        .answer { margin-top: 5px; }
+        button { 
+                 margin-top: 10px; 
+                 cursor: pointer; 
+                 background-color: #a49f9f;
+                 color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz de Matemática</h1>
+    <button onclick="generateQuestion()">Gerar Pergunta</button>
+    <div id="questionsList"></div>
+
+    <script>
+        function generateQuestion() {
+            const num1 = Math.floor(Math.random() * 10) + 1;
+            const num2 = Math.floor(Math.random() * 10) + 1;
+            const questionText = `Quanto é ${num1} + ${num2}?`;
+            
+            const questionDiv = document.createElement("div");
+            questionDiv.className = "question";
+            questionDiv.innerHTML = `<p><strong>${questionText}</strong></p>
+                <input type="number" class="answer" placeholder="Digite sua resposta">
+                <button onclick="checkAnswer(this, ${num1 + num2})">Verificar</button>
+                <p class="feedback"></p>`;
+            
+            document.getElementById("questionsList").appendChild(questionDiv);
+        }
+
+        function checkAnswer(button, correctAnswer) {
+            const input = button.previousElementSibling;
+            const feedback = button.nextElementSibling;
+            if (parseInt(input.value) === correctAnswer) {
+                feedback.textContent = "Correto!";
+                feedback.style.color = "green";
+            } else {
+                feedback.textContent = "Errado. Tente novamente.";
+                feedback.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
